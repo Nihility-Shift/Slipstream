@@ -26,7 +26,7 @@ namespace Slipstream
     {
         public static bool Enabled { get; private set; } = false;
 
-        public override MultiplayerType MPType => MultiplayerType.Host;
+        public override MultiplayerType MPType => MultiplayerType.Client;
 
         public override string Author => MyPluginInfo.PLUGIN_AUTHORS;
 

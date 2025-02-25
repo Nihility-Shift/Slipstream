@@ -25,7 +25,7 @@ namespace Slipstream
             if (LocalPlayer.Instance.Locomotion != __instance) return;
 
             //Check if the ship exists
-            if (ClientGame.Current?.PlayerShip?.Platform?.Velocity == null) return;
+            if (ClientGame.Current?.PlayerShip?.Platform?.Velocity == null || ClientGame.Current.PlayerShip.Transform == null) return;
 
             Vector3 shipVelocty = ClientGame.Current.PlayerShip.Platform.Velocity;
             Quaternion shipRotation = ClientGame.Current.PlayerShip.Platform.Rotation;
