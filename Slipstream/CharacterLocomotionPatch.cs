@@ -14,8 +14,7 @@ namespace Slipstream
         private static Vector3 lastShipVelocity = Vector3.zero;
         private static Quaternion lastShipRotation = Quaternion.identity;
 
-        [HarmonyPrefix]
-        [HarmonyPatch("UpdateExternalForces")]
+        [HarmonyPatch("UpdateExternalForces"), HarmonyPrefix]
         static void PrefixForces(CharacterLocomotion __instance, ref Vector3 ___m_ExternalForce, out Vector3 __state)
         {
             __state = Vector3.zero;
